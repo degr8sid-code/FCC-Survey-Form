@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>FCC: Survey Form</title>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <h1 id="title">freecodecamp Survey Form</h1>
+        </header>
+        <main>
+            <p id="description"><em>Thank you for taking the time to help us improve the platform</em></p>
+            <div id="form">
+                <form id="survey-form">
+                    <div class="form-item">
+                        <label id="name-label" for="name">Name:</label></br>
+                        <input id="name" type="text" name="name" required placeholder="Your name"></br>
+          
+                        <label id="email-label" for="email">Email:</label></br>
+                        <input id="email" type="email" name="email" required placeholder="email@example.com"></br>
+          
+                        <label id="number-label" for="number">Age:</label></br>
+                        <input id="number" type="number" name="number" max="999" min="0" placeholder="30"></br>
+                      </div>
+
+                      <div class="form-item">
+                        <label id="dropdown-label" for="dropdown">Which option describes your current role?</label></br>
+                        <select id="dropdown">
+                          <option value="" disabled selected>Select an option</option>
+                          <option value="1">Student</option>
+                          <option value="2">Employed</option>
+                          <option value="3">Part time student</option>
+                          <option value="4">Prefer not to say</option>
+                          <option value="5">Other</option>
+                        </select></br>
+                      </div>
+
+                      <div class="form-item">
+                        <label>What is your experience in coding?</label></br>
+                        <input type="radio" name="recommend" value="0">It's my first time</br>
+                        <input type="radio" name="recommend" value="1">I have been learning coding for sometime</br>
+                        <input type="radio" name="recommend" value="2">I have developed some personal projects</br>
+                        <input type="radio" name="recommend" value="3">I'm a professional developer</br>
+                      </div>
+
+                      <div class="form-item">
+                        <label>What do want to learn at freeCodeCamp?</label></br>
+                        <input type="checkbox" name="improve" value="0">HTML</br>
+                        <input type="checkbox" name="improve" value="1">CSS</br>
+                        <input type="checkbox" name="improve" value="2">JavaScript</br>
+                        <input type="checkbox" name="improve" value="3">Other</br>
+                      </div>
+          
+                      <div class="form-item">
+                        <label id="comment-label" for="comment">Additional comments:</label></br>
+                        <textarea id="comment" rows="3"></textarea>
+                      </div>
+          
+                      <div id="submit-btn">
+                        <input id="submit" class="button" type="submit" value="Submit">
+                      </div>
+
+
+                </form>
+
+            </div>
+        </main>
+
+        <footer class="header-footer">
+            <div class="footer">
+              <div class="center">
+                This page was built by <a href="https://twitter.com/degr8sid" target="_blank">@degr8sid</a> as a code learning project at <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+          <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+          
+    </body>
+</html>
