@@ -1,81 +1,96 @@
-<html>
-    <head>
-        <title>FCC: Survey Form</title>
-        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="CSS/style.css">
-    </head>
-    <body>
-        <div class="container">
-        <header>
-            <h1 id="title">freecodecamp Survey Form</h1>
-        </header>
-        <main>
-            <p id="description"><em>Thank you for taking the time to help us improve the platform</em></p>
-            <div id="form">
-                <form id="survey-form">
-                    <div class="form-item">
-                        <label id="name-label" for="name">Name:</label></br>
-                        <input id="name" type="text" name="name" required placeholder="Your name"></br>
-          
-                        <label id="email-label" for="email">Email:</label></br>
-                        <input id="email" type="email" name="email" required placeholder="email@example.com"></br>
-          
-                        <label id="number-label" for="number">Age:</label></br>
-                        <input id="number" type="number" name="number" max="999" min="0" placeholder="30"></br>
-                      </div>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>FCC: Survey Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body translate="no">
+<div class="container">
+<header class="header">
+<h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+<p id="description" class="description text-center">
+Thank you for taking the time to help us improve the platform
+</p>
+</header>
+<form id="survey-form">
+<div class="form-group">
+<label id="name-label" for="name">Name</label>
+<input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="">
+</div>
+<div class="form-group">
+<label id="email-label" for="email">Email</label>
+<input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required="">
+</div>
+<div class="form-group">
+<label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+<input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age">
+</div>
+<div class="form-group">
+<p>Which option best describes your current role?</p>
+<select id="dropdown" name="role" class="form-control" required="">
+<option disabled="" selected="" value="">Select current role</option>
+<option value="student">Student</option>
+<option value="job">Full Time Job</option>
+<option value="learner">Full Time Learner</option>
+<option value="preferNo">Prefer not to say</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="form-group">
+<p>Would you recommend freeCodeCamp to a friend?</p>
+<label>
+<input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">Definitely</label>
+<label>
+<input name="user-recommend" value="maybe" type="radio" class="input-radio">Maybe</label>
+<label><input name="user-recommend" value="not-sure" type="radio" class="input-radio">Not sure</label>
+</div>
+<div class="form-group">
+<p>
+What is your favorite feature of freeCodeCamp?
+</p>
+<select id="most-like" name="mostLike" class="form-control" required="">
+<option disabled="" selected="" value="">Select an option</option>
+<option value="challenges">Challenges</option>
+<option value="projects">Projects</option>
+<option value="community">Community</option>
+<option value="openSource">Open Source</option>
+</select>
+</div>
+<div class="form-group">
+<p>
+What would you like to see improved?
+<span class="clue">(Check all that apply)</span>
+</p>
+<label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox">Front-end Projects</label>
+<label>
+<input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">Back-end Projects</label>
+<label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox">Data Visualization</label>
+<label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox">Challenges</label>
+<label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox">Open Source Community</label>
+<label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox">Gitter help rooms</label>
+<label><input name="prefer" value="videos" type="checkbox" class="input-checkbox">Videos</label>
+<label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox">City Meetups</label>
+<label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox">Wiki</label>
+<label><input name="prefer" value="forum" type="checkbox" class="input-checkbox">Forum</label>
+<label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox">Additional Courses</label>
+</div>
+<div class="form-group">
+<p>Any comments or suggestions?</p>
+<textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+</div>
+<div class="form-group">
+<button type="submit" id="submit" class="submit-button">
+Submit
+</button>
+</div>
+</form>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 
-                      <div class="form-item">
-                        <label id="dropdown-label" for="dropdown">Which option describes your current role?</label></br>
-                        <select id="dropdown">
-                          <option value="" disabled selected>Select an option</option>
-                          <option value="1">Student</option>
-                          <option value="2">Employed</option>
-                          <option value="3">Part time student</option>
-                          <option value="4">Prefer not to say</option>
-                          <option value="5">Other</option>
-                        </select></br>
-                      </div>
 
-                      <div class="form-item">
-                        <label>What is your experience in coding?</label></br>
-                        <input type="radio" name="recommend" value="0">It's my first time</br>
-                        <input type="radio" name="recommend" value="1">I have been learning coding for sometime</br>
-                        <input type="radio" name="recommend" value="2">I have developed some personal projects</br>
-                        <input type="radio" name="recommend" value="3">I'm a professional developer</br>
-                      </div>
-
-                      <div class="form-item">
-                        <label>What do want to learn at freeCodeCamp?</label></br>
-                        <input type="checkbox" name="improve" value="0">HTML</br>
-                        <input type="checkbox" name="improve" value="1">CSS</br>
-                        <input type="checkbox" name="improve" value="2">JavaScript</br>
-                        <input type="checkbox" name="improve" value="3">Other</br>
-                      </div>
-          
-                      <div class="form-item">
-                        <label id="comment-label" for="comment">Additional comments:</label></br>
-                        <textarea id="comment" rows="3"></textarea>
-                      </div>
-          
-                      <div id="submit-btn">
-                        <input id="submit" class="button" type="submit" value="Submit">
-                      </div>
-
-
-                </form>
-
-            </div>
-        </main>
-
-        <footer class="header-footer">
-            <div class="footer">
-              <div class="center">
-                This page was built by <a href="https://twitter.com/degr8sid" target="_blank">@degr8sid</a> as a code learning project at <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a>
-              </div>
-            </div>
-          </footer>
-        </div>
-          <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
-          
-    </body>
-</html>
+</body></html>
